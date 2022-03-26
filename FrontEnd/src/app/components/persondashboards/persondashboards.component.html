@@ -1,0 +1,51 @@
+<div class="container" style="margin-top: 100px">
+  <div class="row">
+    <div class="col-md-12 col-sm-12">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th class="col-md-3 col-sm-3">Name</th>
+            <th class="col-md-3 col-sm-3">Email</th>
+            <th class="col-md-3 col-sm-3">Age In years</th>
+            <th class="col-md-3 col-sm-3">Country</th>
+            <th class="col-md-3 col-sm-3">Avatar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-secondary" *ngFor="let person of PersonList">
+            <td class="col-md-3 col-sm-3">{{ person.name }}</td>
+            <td class="col-md-3 col-sm-3">{{ person.email }}</td>
+            <td class="col-md-3 col-sm-3">{{ person.dob | age }}</td>
+            <td class="col-md-3 col-sm-3">{{ person.country }}</td>
+            <td class="col-md-3 col-sm-3">
+              <img
+                src="{{ person.avatar }}"
+                alt="avatar"
+                style="width: 80px; height: 80px"
+              />
+            </td>
+            <td class="col-md-3 col-sm-3">
+              <div class="d-flex justify-content-between">
+                <button
+                  type="button"
+                  class="btn btn-warning mx-2"
+                  (click)="deleteperson(person.id)"
+                >
+                  Delete
+                </button>
+
+                <button
+                  type="button"
+                  class="btn btn-info"
+                  (click)="updatePerson(person.id)"
+                >
+                  Update
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

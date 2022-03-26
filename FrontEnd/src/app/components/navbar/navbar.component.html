@@ -1,0 +1,69 @@
+<nav
+  class="navbar navbar-expand-lg text-uppercase"
+  style="background-color: #5aa8db"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarColor02"
+      aria-controls="navbarColor02"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav m-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link active text-decoration-none"
+            style="font-size: x-large; font-family: Segoe UI; color: #ffffff"
+            routerLink="/home"
+            >Home
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link text-decoration-none"
+            style="font-size: x-large; font-family: Segoe UI; color: #ffffff"
+            routerLink="/Persons"
+            routerLinkActive="active"
+            >Persons</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link text-decoration-none"
+            style="font-size: x-large; font-family: Segoe UI; color: #ffffff"
+            routerLink="/addperson"
+            routerLinkActive="active"
+            >Add Person</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link text-decoration-none"
+            style="font-size: x-large; font-family: Segoe UI; color: #ffffff"
+            routerLink="/Personsdashboard"
+            routerLinkActive="active"
+            >Dashboard</a
+          >
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input
+          class="form-control me-sm-2"
+          type="text"
+          placeholder="Search"
+          style="width: 250px"
+        />
+      </form>
+    </div>
+  </div>
+</nav>

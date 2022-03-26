@@ -1,0 +1,9 @@
+<div style="margin-top: 40px; margin-left: 2px" class="container">
+  <div class="row">
+    <app-personscards
+      class="col-md-6 col-sm-12 col-lg-4 col d-flex justify-content-center align-content-center"
+      *ngFor="let item of PersonList"
+      [Person]="item"
+    ></app-personscards>
+  </div>
+</div>

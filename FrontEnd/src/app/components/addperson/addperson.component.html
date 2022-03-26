@@ -1,0 +1,75 @@
+<div class="container">
+  <div class="form">
+    <form #pFrm="ngForm" (ngSubmit)="AddPerson()">
+      <div class="mb-3">
+        <input
+          placeholder="Name"
+          #name="ngModel"
+          type="text"
+          class="form-control"
+          id="pName"
+          name="pname"
+          [(ngModel)]="PersonList.name"
+          required
+          minlength="4"
+        />
+        <div
+          [hidden]="name.valid || name.untouched"
+          class="alert alert-warning"
+        >
+          <small *ngIf="name.errors?.['required']"> Name is required</small>
+          <small *ngIf="name.errors?.['minlength']">
+            Name must be at least 4 characters long.</small
+          >
+        </div>
+      </div>
+      <div class="mb-3">
+        <input
+          placeholder="Email"
+          type="email"
+          class="form-control"
+          id="email"
+          name="persEmail"
+          [(ngModel)]="PersonList.email"
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          type="date"
+          class="form-control"
+          id="dob"
+          placeholder="dd-mm-yyyy"
+          value=""
+          min="1997-01-01"
+          max="2030-12-31"
+          name="persdob"
+          [(ngModel)]="PersonList.dob"
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          placeholder="Country"
+          type="text"
+          class="form-control"
+          id="country"
+          name="persdob"
+          [(ngModel)]="PersonList.country"
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          placeholder="Attach Your Avatar"
+          type="text"
+          class="form-control"
+          id="avatar"
+          name="Persavatar"
+          [(ngModel)]="PersonList.avatar"
+        />
+      </div>
+
+      <button [disabled]="pFrm.invalid" type="submit" class="btn">
+        Submit
+      </button>
+    </form>
+  </div>
+</div>

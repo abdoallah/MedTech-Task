@@ -1,0 +1,125 @@
+<!-- <div class="col-md-6 col-sm-12 col-lg-4">
+  <div
+    class="card"
+    style="
+      width: 15rem;
+      height: 20rem;
+      margin-right: 40px !important;
+      margin-bottom: 40px;
+      border-top-left-radius: 20px;
+      background-color: rgb(240, 245, 245);
+    "
+  >
+    <img
+      class="card-img-fluid"
+      src="{{ Person.avatar }}"
+      alt="{{ Person.name }}"
+      style="
+        height: 150px;
+        width: 150px;
+        justify-content: center;
+        margin: auto;
+        margin-top: 8px;
+        margin-bottom: 8px;
+      "
+    />
+
+    <div
+      class="card-body"
+      style="background-color: #5aa8db; border-top-left-radius: 20px"
+    >
+      <h3
+        class="card-title"
+        style="
+          color: white;
+          font-size: larger;
+          font-family: Segoe UI;
+          cursor: pointer;
+        "
+        (click)="GetPersonDetails(Person.id)"
+      >
+        Name: {{ Person.name }}
+      </h3>
+      <h3
+        class="card-text"
+        style="color: white; font-size: large; font-family: Segoe UI"
+      >
+        Age: {{ Person.dob | age }} Years Old
+      </h3>
+      <h6
+        class="card-text"
+        style="color: white; font-size: large; font-family: Segoe UI"
+      >
+        Country : {{ Person.country }}
+      </h6>
+
+      <h6
+        class="card-text"
+        style="
+          color: rgb(3, 47, 105);
+          font-family: Segoe UI;
+          font-size: small;
+          text-decoration: underline;
+        "
+      >
+        Email:<br />
+        {{ Person.email }}
+      </h6>
+    </div>
+  </div>
+</div> -->
+
+<div class="container mt-5 mb-5">
+  <div class="row g-2">
+    <div
+      class="col-md-3"
+      style="
+        width: 15rem;
+        height: 20rem;
+        margin-right: 40px !important;
+        margin-bottom: 40px;
+      "
+    >
+      <div class="card p-2 py-3 text-center">
+        <div class="img mb-2">
+          <img
+            src="{{ Person.avatar }}"
+            alt="{{ Person.name }}"
+            width="70"
+            class="rounded-circle"
+          />
+        </div>
+        <h5 class="mb-0" (click)="GetPersonDetails(Person.id)">
+          {{ Person.name }}
+        </h5>
+        <div class="age">
+          <small>
+            <i class="fa fa-child" aria-hidden="true"></i>
+            {{ Person.dob | age }} Years
+          </small>
+        </div>
+
+        <div class="flag">
+          <i class="flag flag-egypt"></i>
+          <h5>{{ Person.country }}</h5>
+        </div>
+
+        <div class="ratings mt-2">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <small style="color: blue; text-decoration: underline"
+            >age {{ Person.email }}</small
+          >
+        </div>
+
+        <div class="mt-4 apointment">
+          <button
+            class="btn btn-success text-uppercase"
+            (click)="GetPersonDetails(Person.id)"
+          >
+            Details
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

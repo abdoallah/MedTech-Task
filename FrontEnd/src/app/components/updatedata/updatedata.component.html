@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="form">
+    <h1>Edit Details</h1>
+    <div class="form-group">
+      <label for="name ">Name</label>
+      <input type="text" class="form-control" [(ngModel)]="person.name" />
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" class="form-control" [(ngModel)]="person.email" />
+    </div>
+    <div class="form-group">
+      <label for="age">age</label>
+      <input type="text" class="form-control" [(ngModel)]="person.dob" />
+    </div>
+    <div class="form-group">
+      <label for="country">country</label>
+      <input type="text" class="form-control" [(ngModel)]="person.country" />
+    </div>
+    <div class="form-group">
+      <label for="avatar">avatar</label>
+      <input type="text" class="form-control" [(ngModel)]="person.avatar" />
+    </div>
+
+    <div class="form-goup">
+      <button
+        type="submit"
+        class="btn btn-success"
+        (click)="update(person.id, person)"
+      >
+        update
+      </button>
+    </div>
+  </div>
+</div>
