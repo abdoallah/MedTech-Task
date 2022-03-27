@@ -27,19 +27,18 @@
             <td class="col-md-3 col-sm-3">
               <div class="d-flex justify-content-between">
                 <button
-                  type="button"
-                  class="btn btn-warning mx-2"
-                  (click)="deleteperson(person.id)"
-                >
-                  Delete
-                </button>
-
-                <button
-                  type="button"
+                  type="submit"
                   class="btn btn-info"
                   (click)="updatePerson(person.id)"
                 >
                   Update
+                </button>
+                <button
+                  type="submit"
+                  class="btn btn-warning mx-2"
+                  (click)="deleteperson(person.id)"
+                >
+                  Delete
                 </button>
               </div>
             </td>

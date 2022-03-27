@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap");
+
+button {
+  width: 80px;
+  padding: 5px;
+  margin: 0 3px;
+  background-color: #3ba6d1;
+  outline: none;
+  border: 1px solid #ffffff;
+  box-shadow: 2px 2px 2px #3f3f3f;
+}
+
+button:hover {
+  box-shadow: 2px 2px 3px;
+}
+
+button:active {
+  box-shadow: 1px 1px 3px;
+}
